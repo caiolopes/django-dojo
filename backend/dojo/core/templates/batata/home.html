@@ -1,0 +1,23 @@
+{% extends 'batata/layout.html' %}
+
+{% block content %}
+
+  <!-- Template engine do django -->
+  <ul>
+    {% for joke in jokes %}
+  </ul>
+
+  <div class="col col-md-3">
+    <div class="card" style="width: 18rem;">
+      <img src="https://sophosnews.files.wordpress.com/2012/01/chuck-norris-thumb.jpg?w=250" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">{{ joke.text }}</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+
+    {% endfor %}
+
+{% endblock %}
