@@ -1,0 +1,44 @@
+## Coding Dojo de Python/Django
+
+Nessa primeira etapa do coding dojo, cobrimos:
+
+- virtualenv
+    - criando um virtualenv com o comando `python -m venv venv`
+- pip
+    - instalando o `django` e a biblioteca `requests`
+    - definindo o arquivo `requirements.txt`
+- comandos pip:
+    - pip freeze
+    - pip list
+    - pip install
+    - pip install -r requirements.txt
+    - pip install --upgrade
+- django cli, via `python manage.py`. Vimos os comandos:
+    - startproject: cria um projeto django
+    - startapp: cria um app dentro do projeto
+    - makemigrations: cria os arquivos de migrações caso detectado mudança nos models
+    - migrate: roda as migrações pendentes
+    - runserver: roda o servidor local
+    - showmigrations: mostra as migrações pendentes e as que já rodaram
+- migrations:
+    - criamos um model Joke
+    - rodamos as migrações
+    - discutimos o que triga uma migração e o que não triga
+- urls
+    - definindo as urls do nosso app no arquivo `urls.py`
+    - importando as funções das views que lidam com a requisição naquela url
+- views e django orm:
+    - criamos funções que processam as requisições do cliente
+    - retornarmos um hello world com HttpResponse
+    - utilizamos a biblioteca `requests` para bater no endpoint da api de piadas aleatórias do chuck norris http://api.icndb.com/jokes/random
+    - salvamos a piada no banco via django orm e retornamos
+    - fizemos uma query com o django orm que retorna todas as piadas
+    - mostramos como ver uma query do django orm em sql
+    - exploramos o banco sqlite3 com o comando `sqlite3 db.sqlite3`
+    - adicionamos uma variável no context de uma template e renderizamos a template mostrando a lista de piadas salvas no banco
+    - discutimos o conceito do que é um `endpoint`
+- template engine
+    - utilizando o jinja (templete engine do django) para mostrar a lista de piadas com um for
+    - herança com extends e block
+    - colocamos bootstrap
+- separamos em pastas backend/frontend para no futuro fazer um app em react que utiliza esse django como uma api
