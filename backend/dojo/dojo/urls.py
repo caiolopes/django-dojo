@@ -15,13 +15,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from graphene_django.views import GraphQLView
 from core.views import joke, home
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home),
     path('get_joke/', joke),
-    path('api/v1/jokes', joke) # endpoint
+    path('api/v1/jokes', joke), # endpoint
+    path('graphql/', GraphQLView.as_view(graphiql=True)),
 ]
 
 
