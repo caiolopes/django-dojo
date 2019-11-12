@@ -1,5 +1,7 @@
 ## Coding Dojo de Python/Django
 
+## Primeira sessão
+
 Nessa primeira etapa do coding dojo, cobrimos:
 
 - virtualenv
@@ -42,3 +44,27 @@ Nessa primeira etapa do coding dojo, cobrimos:
     - herança com extends e block
     - colocamos bootstrap
 - separamos em pastas backend/frontend para no futuro fazer um app em react que utiliza esse django como uma api
+
+## Segunda sessão
+
+### GraphQL e Graphene
+
+- Instalamos o [graphene-django](https://github.com/graphql-python/graphene-django) e configuramos no app django criado na sessão 1
+- Criamos uma Query GraphQL que retorna todas as piadas e uma Mutation e pra criar uma piada nova no arquivo [`schema.py`](https://github.com/caiolopes/django-dojo/blob/master/projeto-1/backend/dojo/dojo/schema.py)
+- Abordamos conceitos de GraphQL e do código, com diversos exemplos, e exploramos a interface do graphiql
+
+### Celery
+
+- Instalamos e configuramos o celery
+- Fizemos uma task periódica que pega uma piada nova a cada 15 segundos no arquivo [`tasks.py`](https://github.com/caiolopes/django-dojo/blob/master/projeto-1/backend/dojo/core/tasks.py)
+
+
+## Terceira sessão: testes e pytest
+
+Slides: https://hackmd.io/@caiolopes/B1ZOfQvjH
+
+- Criamos um novo projeto do zero, pra reforçar os conceitos, que tinha um model apenas: `Product`
+- Criamos uma view e um endpoint para esse novo app
+- Instalamos as bibliotecas `pytest pytest-django pytest-cov mixer`
+- Fizemos testes pra verificar o endpoint criado nas URLs e pro model utilizando pytest
+- Abordamos conceitos `fixture` e `parametrize`
